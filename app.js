@@ -9,6 +9,10 @@ Ext.application({
     extend: 'SimpleERP.Application',
 
     requires: [
+        'SimpleERP.overrides.*',
+        'SimpleERP.locale.*',
+        'SimpleERP.ux.*',
+        'SimpleERP.util.*',
         'SimpleERP.view.main.Main'
     ],
 

@@ -6,6 +6,11 @@
 Ext.define('SimpleERP.Application', {
     extend: 'Ext.app.Application',
 
+    requires: [
+        'Ext.util.Format'
+    ],
+
+
     name: 'SimpleERP',
 
     quickTips: false,
@@ -17,10 +22,15 @@ Ext.define('SimpleERP.Application', {
 
     stores: [
         // TODO: add global / shared stores here
+        'NavigationTree'
+
     ],
 
     launch: function () {
         // TODO - Launch the application
+        Ext.util.Format.defaultValue = function (value, defaultValue) {
+            return Ext.isEmpty(value) ? defaultValue : value;
+        }
     },
 
     onAppUpdate: function () {

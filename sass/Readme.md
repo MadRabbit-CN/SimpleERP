@@ -15,19 +15,19 @@ This folder contains misc. support code for Sass builds (global functions, etc.)
 
 This folder contains Sass files defining CSS rules corresponding to classes
 included in the application's JavaScript code build. By default, files in this 
-folder are mapped to the application's root namespace, 'SimpleERP'. This is set in
+folder are mapped to the application's root namespace, 'Admin'. This is set in
 `"app.json"`:
 
     "sass": {
-        "namespace": "SimpleERP"
+        "namespace": "Admin"
     }
 
 ### ./sass/var
 
 This folder contains Sass files defining Sass variables corresponding to classes
 included in the application's JavaScript code build. By default, files in this 
-folder are mapped to the application's root namespace, 'SimpleERP' in the same way
-as `"SimpleERP/sass/src"`.
+folder are mapped to the application's root namespace, 'Admin' in the same way
+as `"Admin/sass/src"`.
 
 ## Slicing
 
