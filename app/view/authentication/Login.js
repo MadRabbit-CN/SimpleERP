@@ -10,7 +10,7 @@ Ext.define('SimpleERP.view.authentication.Login', {
         'Ext.button.Button'
     ],
 
-    title: 'Let\'s Log In',
+    title: I18N.LoginTitle,
     defaultFocus: 'authdialog', // Focus the Auth Form to force field focus as well
 
     items: [
@@ -34,7 +34,7 @@ Ext.define('SimpleERP.view.authentication.Login', {
             items: [
                 {
                     xtype: 'label',
-                    text: 'Sign into your account'
+                    text: I18N.LoginLabel
                 },
                 {
                     xtype: 'textfield',
@@ -43,7 +43,7 @@ Ext.define('SimpleERP.view.authentication.Login', {
                     height: 55,
                     hideLabel: true,
                     allowBlank : false,
-                    emptyText: 'UserName',
+                    emptyText: I18N.UserId,
                     triggers: {
                         glyphed: {
                             cls: 'trigger-glyph-noop auth-email-trigger'
@@ -55,7 +55,7 @@ Ext.define('SimpleERP.view.authentication.Login', {
                     cls: 'auth-textbox',
                     height: 55,
                     hideLabel: true,
-                    emptyText: 'Password',
+                    emptyText: I18N.Password,
                     inputType: 'password',
                     name: 'Password',
                     allowBlank : false,
@@ -75,7 +75,8 @@ Ext.define('SimpleERP.view.authentication.Login', {
                             name: 'RememberMe',
                             cls: 'form-panel-font-color rememberMeCheckbox',
                             height: 30,
-                            boxLabel: 'Remember me'
+                            name: 'RemberMe',
+                            boxLabel: I18N.RememberMe
                         }
                     ]
                 },
@@ -86,7 +87,7 @@ Ext.define('SimpleERP.view.authentication.Login', {
                     ui: 'soft-green',
                     iconAlign: 'right',
                     iconCls: 'x-fa fa-angle-right',
-                    text: 'Login',
+                    text: I18N.LoginTitle,
                     formBind: true,
                     listeners: {
                         click: 'onLoginButton'

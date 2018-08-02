@@ -2,9 +2,6 @@ Ext.define('SimpleERP.view.main.Main', {
     extend: 'Ext.container.Viewport',
 
     requires: [
-        'Ext.button.Segmented',
-        'Ext.container.Container',
-        'Ext.layout.container.Card',
         'Ext.layout.container.VBox',
         'Ext.list.Tree',
         'Ext.toolbar.*',
@@ -12,7 +9,8 @@ Ext.define('SimpleERP.view.main.Main', {
         'SimpleERP.util.Url',
         'SimpleERP.view.main.MainContainerWrap',
         'SimpleERP.view.main.MainController',
-        'SimpleERP.view.main.MainModel'
+        'SimpleERP.view.main.MainModel',
+        'SimpleERP.view.main.WeekStar.WeekStar'
     ],
 
     controller: 'main',
@@ -32,6 +30,7 @@ Ext.define('SimpleERP.view.main.Main', {
 
     items: [
         {
+            //Header导航区--垂直布局——上
             xtype: 'toolbar',
             cls: 'sencha-dash-dash-headerbar shadow',
             height: 64,
@@ -73,10 +72,11 @@ Ext.define('SimpleERP.view.main.Main', {
             ]
         },
         {
+            //主视图容器——垂直布局——下
             xtype: 'maincontainerwrap',
             id: 'main-view-detail-wrap',
             reference: 'mainContainerWrap',
-            flex: 1,
+            flex: 10,
             items: [
                 {
                     xtype: 'treelist',
@@ -92,15 +92,11 @@ Ext.define('SimpleERP.view.main.Main', {
                     }
                 },
                 {
-                    xtype: 'container',
+                    //主页center页面
+                    xtype: 'weekstar',
                     flex: 1,
-                    reference: 'mainCardPanel',
-                    cls: 'sencha-dash-right-main-container',
-                    itemId: 'contentPanel',
-                    layout: {
-                        type: 'card',
-                        anchor: '100%'
-                    }
+                    reference: 'weekstar',
+                    itemId: 'weekstarPanel',
                 }
             ]
         }

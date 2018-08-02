@@ -13,7 +13,7 @@
         Failed500: '服务器内部错误',
         FailedOtherCode:'错误代码：{0}<br\>响应：{1}',
 
-        AppTitle: '简单的CMS系统',
+        AppTitle: 'ERP系统',
         DefaultMessageTitle: '信息',
         GetUserInfo: '正在加载用户信息......',
         StateRestoreWait: '正在恢复状态信息...',
