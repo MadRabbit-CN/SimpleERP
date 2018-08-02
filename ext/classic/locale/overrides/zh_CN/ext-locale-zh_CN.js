@@ -272,3 +272,9 @@ Ext.define("Ext.locale.zh_CN.window.MessageBox", {
 Ext.define("Ext.locale.zh_CN.Component", {	
     override: "Ext.Component"
 });
+
+//重写窗口类提示信息
+Ext.define("Ext.locale.zh_CN.window.Window",{
+    override: "Ext.window.window",
+    closeToolText:'关闭窗口'
+});
