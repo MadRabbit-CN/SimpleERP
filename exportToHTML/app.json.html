@@ -1,0 +1,528 @@
+<html>
+<head>
+<title>app.json</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #d8d8d8;}
+.s1 { color: #d8d8d8;}
+.s2 { color: #ffa0a0;}
+.s3 { color: #808080; font-style: italic;}
+.s4 { color: #60ff60;}
+.s5 { color: #757575;}
+.ln { color: #555753; font-weight: normal; font-style: normal; }
+</style>
+</head>
+<body bgcolor="#000000">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+app.json</font>
+</center></td></tr></table>
+<pre><a name="l1"><span class="ln">1    </span></a><span class="s0">{</span>
+  <span class="s2">&quot;name&quot;</span><span class="s0">: </span><span class="s2">&quot;SimpleERP&quot;</span><span class="s0">,</span>
+  <span class="s2">&quot;namespace&quot;</span><span class="s0">: </span><span class="s2">&quot;SimpleERP&quot;</span><span class="s0">,</span>
+  <span class="s2">&quot;version&quot;</span><span class="s0">: </span><span class="s2">&quot;1.0.0.0&quot;</span><span class="s0">,</span>
+  <span class="s2">&quot;framework&quot;</span><span class="s0">: </span><span class="s2">&quot;ext&quot;</span><span class="s0">,</span>
+  <span class="s2">&quot;toolkit&quot;</span><span class="s0">: </span><span class="s2">&quot;classic&quot;</span><span class="s0">,</span>
+  <span class="s2">&quot;theme&quot;</span><span class="s0">: </span><span class="s2">&quot;theme-triton&quot;</span><span class="s0">,</span>
+
+  <span class="s3">/** 
+<a name="l2"><span class="ln">2    </span></a>   * The list of required packages (with optional versions; default is &quot;latest&quot;). 
+<a name="l3"><span class="ln">3    </span></a>   * 
+<a name="l4"><span class="ln">4    </span></a>   * For example, 
+<a name="l5"><span class="ln">5    </span></a>   * 
+<a name="l6"><span class="ln">6    </span></a>   *      &quot;requires&quot;: [ 
+<a name="l7"><span class="ln">7    </span></a>   *          &quot;charts&quot; 
+<a name="l8"><span class="ln">8    </span></a>   *      ] 
+<a name="l9"><span class="ln">9    </span></a>   */</span>
+  <span class="s2">&quot;requires&quot;</span><span class="s0">: [</span>
+    <span class="s2">&quot;font-awesome&quot;</span><span class="s0">,</span>
+    <span class="s2">&quot;charts&quot;</span><span class="s0">,</span>
+    <span class="s2">&quot;ux&quot;</span><span class="s0">,</span>
+    <span class="s2">&quot;locale&quot;</span>
+  <span class="s0">],</span>
+
+  <span class="s2">&quot;local&quot;</span><span class="s0">: </span><span class="s2">&quot;zh_CN&quot;</span><span class="s0">,</span>
+
+  <span class="s3">/** 
+<a name="l10"><span class="ln">10   </span></a>   * The relative path to the application's markup file (html, jsp, asp, etc.). 
+<a name="l11"><span class="ln">11   </span></a>   */</span>
+  <span class="s2">&quot;indexHtmlPath&quot;</span><span class="s0">: </span><span class="s2">&quot;index.html&quot;</span><span class="s0">,</span>
+
+  <span class="s3">/** 
+<a name="l12"><span class="ln">12   </span></a>   * Comma-separated string with the paths of directories or files to search. Any classes 
+<a name="l13"><span class="ln">13   </span></a>   * declared in these locations will be available in your class &quot;requires&quot; or in calls 
+<a name="l14"><span class="ln">14   </span></a>   * to &quot;Ext.require&quot;. The &quot;app.dir&quot; variable below is expanded to the path where the 
+<a name="l15"><span class="ln">15   </span></a>   * application resides (the same folder in which this file is located). 
+<a name="l16"><span class="ln">16   </span></a>   */</span>
+  <span class="s2">&quot;classpath&quot;</span><span class="s0">: [</span>
+      <span class="s2">&quot;app&quot;</span>
+  <span class="s0">],</span>
+
+  <span class="s3">/** 
+<a name="l17"><span class="ln">17   </span></a>   * Comma-separated string with the paths of directories or files to search. Any classes 
+<a name="l18"><span class="ln">18   </span></a>   * declared in these locations will be automatically required and included in the build. 
+<a name="l19"><span class="ln">19   </span></a>   * If any file defines an Ext JS override (using Ext.define with an &quot;override&quot; property), 
+<a name="l20"><span class="ln">20   </span></a>   * that override will in fact only be included in the build if the target class specified 
+<a name="l21"><span class="ln">21   </span></a>   * in the &quot;override&quot; property is also included. 
+<a name="l22"><span class="ln">22   </span></a>   */</span>
+  <span class="s2">&quot;overrides&quot;</span><span class="s0">: [</span>
+      <span class="s2">&quot;overrides&quot;</span>
+  <span class="s0">],</span>
+
+  <span class="s3">/** 
+<a name="l23"><span class="ln">23   </span></a>   * Fashion build configuration properties. 
+<a name="l24"><span class="ln">24   </span></a>   */</span>
+  <span class="s2">&quot;fashion&quot;</span><span class="s0">: {</span>
+
+      <span class="s2">&quot;inliner&quot;</span><span class="s0">: {</span>
+          <span class="s3">/** 
+<a name="l25"><span class="ln">25   </span></a>           * Disable resource inliner. Production builds enable this by default. 
+<a name="l26"><span class="ln">26   </span></a>           */</span>
+          <span class="s2">&quot;enable&quot;</span><span class="s0">: </span><span class="s4">false</span>
+      <span class="s0">}</span>
+  },
+
+  <span class="s3">/** 
+<a name="l27"><span class="ln">27   </span></a>   * Sass configuration properties. 
+<a name="l28"><span class="ln">28   </span></a>   */</span>
+  <span class="s2">&quot;sass&quot;</span><span class="s0">: {</span>
+      <span class="s3">/** 
+<a name="l29"><span class="ln">29   </span></a>       * The root namespace to use when mapping *.scss files to classes in the 
+<a name="l30"><span class="ln">30   </span></a>       * sass/src and sass/var directories. For example, &quot;SimpleERP.view.Foo&quot; would 
+<a name="l31"><span class="ln">31   </span></a>       * map to &quot;sass/src/view/Foo.scss&quot;. If we changed this to &quot;SimpleERP.view&quot; then 
+<a name="l32"><span class="ln">32   </span></a>       * it would map to &quot;sass/src/Foo.scss&quot;. To style classes outside the app's 
+<a name="l33"><span class="ln">33   </span></a>       * root namespace, change this to &quot;&quot;. Doing so would change the mapping of 
+<a name="l34"><span class="ln">34   </span></a>       * &quot;SimpleERP.view.Foo&quot; to &quot;sass/src/SimpleERP/view/Foo.scss&quot;. 
+<a name="l35"><span class="ln">35   </span></a>       */</span>
+      <span class="s2">&quot;namespace&quot;</span><span class="s0">: </span><span class="s2">&quot;SimpleERP&quot;</span><span class="s0">,</span>
+
+      <span class="s3">/** 
+<a name="l36"><span class="ln">36   </span></a>       * Generated sass source settings 
+<a name="l37"><span class="ln">37   </span></a>       * 
+<a name="l38"><span class="ln">38   </span></a>       *      &quot;generated&quot;: { 
+<a name="l39"><span class="ln">39   </span></a>       *         // The file used to save sass variables edited via Sencha Inspector and Sencha Themer. 
+<a name="l40"><span class="ln">40   </span></a>       *         // This file will automatically be applied to the end of the scss build. 
+<a name="l41"><span class="ln">41   </span></a>       *         &quot;var&quot;: &quot;sass/save.scss&quot;, 
+<a name="l42"><span class="ln">42   </span></a>       * 
+<a name="l43"><span class="ln">43   </span></a>       *         // The directory used to save generated sass sources. 
+<a name="l44"><span class="ln">44   </span></a>       *         // This directory will automatically be applied to the end of the scss build. 
+<a name="l45"><span class="ln">45   </span></a>       *         &quot;src&quot;: &quot;sass/save&quot; 
+<a name="l46"><span class="ln">46   </span></a>       *      } 
+<a name="l47"><span class="ln">47   </span></a>       * 
+<a name="l48"><span class="ln">48   </span></a>       */</span>
+
+      <span class="s2">&quot;generated&quot;</span><span class="s0">: {</span>
+          <span class="s2">&quot;var&quot;</span><span class="s0">: </span><span class="s2">&quot;sass/save.scss&quot;</span><span class="s0">,</span>
+          <span class="s2">&quot;src&quot;</span><span class="s0">: </span><span class="s2">&quot;sass/save&quot;</span>
+      <span class="s0">},</span>
+
+      <span class="s3">/** 
+<a name="l49"><span class="ln">49   </span></a>       * Comma-separated list of files or folders containing extra Sass. These 
+<a name="l50"><span class="ln">50   </span></a>       * files are automatically included in the Sass compilation. By default this 
+<a name="l51"><span class="ln">51   </span></a>       * is just &quot;etc/all.scss&quot; to allow import directives to control the order 
+<a name="l52"><span class="ln">52   </span></a>       * other files are included. 
+<a name="l53"><span class="ln">53   </span></a>       * 
+<a name="l54"><span class="ln">54   </span></a>       * All &quot;etc&quot; files are included at the top of the Sass compilation in their 
+<a name="l55"><span class="ln">55   </span></a>       * dependency order: 
+<a name="l56"><span class="ln">56   </span></a>       * 
+<a name="l57"><span class="ln">57   </span></a>       *      +-------+---------+ 
+<a name="l58"><span class="ln">58   </span></a>       *      |       | base    | 
+<a name="l59"><span class="ln">59   </span></a>       *      | theme +---------+ 
+<a name="l60"><span class="ln">60   </span></a>       *      |       | derived | 
+<a name="l61"><span class="ln">61   </span></a>       *      +-------+---------+ 
+<a name="l62"><span class="ln">62   </span></a>       *      | packages        |  (in package dependency order) 
+<a name="l63"><span class="ln">63   </span></a>       *      +-----------------+ 
+<a name="l64"><span class="ln">64   </span></a>       *      | application     | 
+<a name="l65"><span class="ln">65   </span></a>       *      +-----------------+ 
+<a name="l66"><span class="ln">66   </span></a>       */</span>
+      <span class="s2">&quot;etc&quot;</span><span class="s0">: [</span>
+          <span class="s2">&quot;sass/etc/all.scss&quot;</span>
+      <span class="s0">],</span>
+
+      <span class="s3">/** 
+<a name="l67"><span class="ln">67   </span></a>       * Comma-separated list of folders containing Sass variable definitions 
+<a name="l68"><span class="ln">68   </span></a>       * files. These file can also define Sass mixins for use by components. 
+<a name="l69"><span class="ln">69   </span></a>       * 
+<a name="l70"><span class="ln">70   </span></a>       * All &quot;var&quot; files are included after &quot;etc&quot; files in the Sass compilation in 
+<a name="l71"><span class="ln">71   </span></a>       * dependency order: 
+<a name="l72"><span class="ln">72   </span></a>       * 
+<a name="l73"><span class="ln">73   </span></a>       *      +-------+---------+ 
+<a name="l74"><span class="ln">74   </span></a>       *      |       | base    | 
+<a name="l75"><span class="ln">75   </span></a>       *      | theme +---------+ 
+<a name="l76"><span class="ln">76   </span></a>       *      |       | derived | 
+<a name="l77"><span class="ln">77   </span></a>       *      +-------+---------+ 
+<a name="l78"><span class="ln">78   </span></a>       *      | packages        |  (in package dependency order) 
+<a name="l79"><span class="ln">79   </span></a>       *      +-----------------+ 
+<a name="l80"><span class="ln">80   </span></a>       *      | application     | 
+<a name="l81"><span class="ln">81   </span></a>       *      +-----------------+ 
+<a name="l82"><span class="ln">82   </span></a>       * 
+<a name="l83"><span class="ln">83   </span></a>       * The &quot;sass/var/all.scss&quot; file is always included at the start of the var 
+<a name="l84"><span class="ln">84   </span></a>       * block before any files associated with JavaScript classes. 
+<a name="l85"><span class="ln">85   </span></a>       */</span>
+      <span class="s2">&quot;var&quot;</span><span class="s0">: [</span>
+          <span class="s2">&quot;sass/var/all.scss&quot;</span><span class="s0">,</span>
+          <span class="s2">&quot;sass/var&quot;</span>
+      <span class="s0">],</span>
+
+      <span class="s3">/** 
+<a name="l86"><span class="ln">86   </span></a>       * Comma-separated list of folders containing Sass rule files. 
+<a name="l87"><span class="ln">87   </span></a>       * 
+<a name="l88"><span class="ln">88   </span></a>       * All &quot;src&quot; files are included after &quot;var&quot; files in the Sass compilation in 
+<a name="l89"><span class="ln">89   </span></a>       * dependency order (the same order as &quot;etc&quot;): 
+<a name="l90"><span class="ln">90   </span></a>       * 
+<a name="l91"><span class="ln">91   </span></a>       *      +-------+---------+ 
+<a name="l92"><span class="ln">92   </span></a>       *      |       | base    | 
+<a name="l93"><span class="ln">93   </span></a>       *      | theme +---------+ 
+<a name="l94"><span class="ln">94   </span></a>       *      |       | derived | 
+<a name="l95"><span class="ln">95   </span></a>       *      +-------+---------+ 
+<a name="l96"><span class="ln">96   </span></a>       *      | packages        |  (in package dependency order) 
+<a name="l97"><span class="ln">97   </span></a>       *      +-----------------+ 
+<a name="l98"><span class="ln">98   </span></a>       *      | application     | 
+<a name="l99"><span class="ln">99   </span></a>       *      +-----------------+ 
+<a name="l100"><span class="ln">100  </span></a>       */</span>
+      <span class="s2">&quot;src&quot;</span><span class="s0">: [</span>
+          <span class="s2">&quot;sass/src&quot;</span>
+      <span class="s0">]</span>
+  },
+
+  <span class="s3">/** 
+<a name="l101"><span class="ln">101  </span></a>   * List of all JavaScript assets in the right execution order. 
+<a name="l102"><span class="ln">102  </span></a>   * 
+<a name="l103"><span class="ln">103  </span></a>   * Each item is an object with the following format: 
+<a name="l104"><span class="ln">104  </span></a>   * 
+<a name="l105"><span class="ln">105  </span></a>   *      { 
+<a name="l106"><span class="ln">106  </span></a>   *          // Path to file. If the file is local this must be a relative path from 
+<a name="l107"><span class="ln">107  </span></a>   *          // this app.json file. 
+<a name="l108"><span class="ln">108  </span></a>   *          // 
+<a name="l109"><span class="ln">109  </span></a>   *          &quot;path&quot;: &quot;path/to/script.js&quot;,   // REQUIRED 
+<a name="l110"><span class="ln">110  </span></a>   * 
+<a name="l111"><span class="ln">111  </span></a>   *          // Set to true on one file to indicate that it should become the container 
+<a name="l112"><span class="ln">112  </span></a>   *          // for the concatenated classes. 
+<a name="l113"><span class="ln">113  </span></a>   *          // 
+<a name="l114"><span class="ln">114  </span></a>   *          &quot;bundle&quot;: false,    // OPTIONAL 
+<a name="l115"><span class="ln">115  </span></a>   * 
+<a name="l116"><span class="ln">116  </span></a>   *          // Set to true to include this file in the concatenated classes. 
+<a name="l117"><span class="ln">117  </span></a>   *          // 
+<a name="l118"><span class="ln">118  </span></a>   *          &quot;includeInBundle&quot;: false,  // OPTIONAL 
+<a name="l119"><span class="ln">119  </span></a>   * 
+<a name="l120"><span class="ln">120  </span></a>   *          // Specify as true if this file is remote and should not be copied into the 
+<a name="l121"><span class="ln">121  </span></a>   *          // build folder. Defaults to false for a local file which will be copied. 
+<a name="l122"><span class="ln">122  </span></a>   *          // 
+<a name="l123"><span class="ln">123  </span></a>   *          &quot;remote&quot;: false,    // OPTIONAL 
+<a name="l124"><span class="ln">124  </span></a>   * 
+<a name="l125"><span class="ln">125  </span></a>   *          // If not specified, this file will only be loaded once, and cached inside 
+<a name="l126"><span class="ln">126  </span></a>   *          // localStorage until this value is changed. You can specify: 
+<a name="l127"><span class="ln">127  </span></a>   *          // 
+<a name="l128"><span class="ln">128  </span></a>   *          //   - &quot;delta&quot; to enable over-the-air delta update for this file 
+<a name="l129"><span class="ln">129  </span></a>   *          //   - &quot;full&quot; means full update will be made when this file changes 
+<a name="l130"><span class="ln">130  </span></a>   *          // 
+<a name="l131"><span class="ln">131  </span></a>   *          &quot;update&quot;: &quot;&quot;,        // OPTIONAL 
+<a name="l132"><span class="ln">132  </span></a>   * 
+<a name="l133"><span class="ln">133  </span></a>   *          // A value of true indicates that is a development mode only dependency. 
+<a name="l134"><span class="ln">134  </span></a>   *          // These files will not be copied into the build directory or referenced 
+<a name="l135"><span class="ln">135  </span></a>   *          // in the generate app.json manifest for the micro loader. 
+<a name="l136"><span class="ln">136  </span></a>   *          // 
+<a name="l137"><span class="ln">137  </span></a>   *          &quot;bootstrap&quot;: false   // OPTIONAL 
+<a name="l138"><span class="ln">138  </span></a>   *      } 
+<a name="l139"><span class="ln">139  </span></a>   * 
+<a name="l140"><span class="ln">140  </span></a>   */</span>
+  <span class="s2">&quot;js&quot;</span><span class="s0">: [</span>
+      {
+          <span class="s2">&quot;path&quot;</span><span class="s0">: </span><span class="s2">&quot;${framework.dir}/build/ext-all-debug.js&quot;</span>
+      <span class="s0">},</span>
+      {
+          <span class="s2">&quot;path&quot;</span><span class="s0">: </span><span class="s2">&quot;app.js&quot;</span><span class="s0">,</span>
+          <span class="s2">&quot;bundle&quot;</span><span class="s0">: </span><span class="s4">true</span>
+      <span class="s0">}</span>
+  ],
+
+  <span class="s3">/** 
+<a name="l141"><span class="ln">141  </span></a>   * List of all CSS assets in the right inclusion order. 
+<a name="l142"><span class="ln">142  </span></a>   * 
+<a name="l143"><span class="ln">143  </span></a>   * Each item is an object with the following format: 
+<a name="l144"><span class="ln">144  </span></a>   * 
+<a name="l145"><span class="ln">145  </span></a>   *      { 
+<a name="l146"><span class="ln">146  </span></a>   *          // Path to file. If the file is local this must be a relative path from 
+<a name="l147"><span class="ln">147  </span></a>   *          // this app.json file. 
+<a name="l148"><span class="ln">148  </span></a>   *          // 
+<a name="l149"><span class="ln">149  </span></a>   *          &quot;path&quot;: &quot;path/to/stylesheet.css&quot;,   // REQUIRED 
+<a name="l150"><span class="ln">150  </span></a>   * 
+<a name="l151"><span class="ln">151  </span></a>   *          // Specify as true if this file is remote and should not be copied into the 
+<a name="l152"><span class="ln">152  </span></a>   *          // build folder. Defaults to false for a local file which will be copied. 
+<a name="l153"><span class="ln">153  </span></a>   *          // 
+<a name="l154"><span class="ln">154  </span></a>   *          &quot;remote&quot;: false,    // OPTIONAL 
+<a name="l155"><span class="ln">155  </span></a>   * 
+<a name="l156"><span class="ln">156  </span></a>   *          // If not specified, this file will only be loaded once, and cached inside 
+<a name="l157"><span class="ln">157  </span></a>   *          // localStorage until this value is changed. You can specify: 
+<a name="l158"><span class="ln">158  </span></a>   *          // 
+<a name="l159"><span class="ln">159  </span></a>   *          //   - &quot;delta&quot; to enable over-the-air delta update for this file 
+<a name="l160"><span class="ln">160  </span></a>   *          //   - &quot;full&quot; means full update will be made when this file changes 
+<a name="l161"><span class="ln">161  </span></a>   *          // 
+<a name="l162"><span class="ln">162  </span></a>   *          &quot;update&quot;: &quot;&quot;      // OPTIONAL 
+<a name="l163"><span class="ln">163  </span></a>   *      } 
+<a name="l164"><span class="ln">164  </span></a>   */</span>
+  <span class="s2">&quot;css&quot;</span><span class="s0">: [</span>
+      {
+          <span class="s5">// this entry uses an ant variable that is the calculated</span>
+          // value of the generated output css file for the app,
+          // defined in .sencha/app/defaults.properties
+          <span class="s2">&quot;path&quot;</span><span class="s0">: </span><span class="s2">&quot;${build.out.css.path}&quot;</span><span class="s0">,</span>
+          <span class="s2">&quot;bundle&quot;</span><span class="s0">: </span><span class="s4">true</span><span class="s0">,</span>
+          <span class="s2">&quot;exclude&quot;</span><span class="s0">: [</span><span class="s2">&quot;fashion&quot;</span><span class="s0">]</span>
+      }
+  ],
+
+  <span class="s3">/** 
+<a name="l165"><span class="ln">165  </span></a>   * This option is used to configure the dynamic loader. At present these options 
+<a name="l166"><span class="ln">166  </span></a>   * are supported. 
+<a name="l167"><span class="ln">167  </span></a>   * 
+<a name="l168"><span class="ln">168  </span></a>   */</span>
+   <span class="s2">&quot;loader&quot;</span><span class="s0">: {</span>
+       <span class="s5">// This property controls how the loader manages caching for requests:</span>
+       //
+       //   - true: allows requests to receive cached responses
+       //   - false: disable cached responses by adding a random &quot;cache buster&quot;
+       //   - other: a string (such as the build.timestamp shown here) to allow
+       //     requests to be cached for this build.
+       //
+       <span class="s2">&quot;cache&quot;</span><span class="s0">: </span><span class="s4">false</span><span class="s0">,</span>
+
+       <span class="s5">// When &quot;cache&quot; is not true, this value is the request parameter used</span>
+       // to control caching.
+       //
+       <span class="s2">&quot;cacheParam&quot;</span><span class="s0">: </span><span class="s2">&quot;_dc&quot;</span>
+   <span class="s0">},</span>
+
+  <span class="s3">/** 
+<a name="l169"><span class="ln">169  </span></a>   * Settings specific to production builds. 
+<a name="l170"><span class="ln">170  </span></a>   */</span>
+  <span class="s2">&quot;production&quot;</span><span class="s0">: {</span>
+      <span class="s2">&quot;output&quot;</span><span class="s0">: {</span>
+          <span class="s2">&quot;appCache&quot;</span><span class="s0">: {</span>
+              <span class="s2">&quot;enable&quot;</span><span class="s0">: </span><span class="s4">true</span><span class="s0">,</span>
+              <span class="s2">&quot;path&quot;</span><span class="s0">: </span><span class="s2">&quot;cache.appcache&quot;</span>
+          <span class="s0">}</span>
+      },
+      <span class="s2">&quot;loader&quot;</span><span class="s0">: {</span>
+          <span class="s2">&quot;cache&quot;</span><span class="s0">: </span><span class="s2">&quot;${build.timestamp}&quot;</span>
+      <span class="s0">},</span>
+      <span class="s2">&quot;cache&quot;</span><span class="s0">: {</span>
+          <span class="s2">&quot;enable&quot;</span><span class="s0">: </span><span class="s4">true</span>
+      <span class="s0">},</span>
+      <span class="s2">&quot;compressor&quot;</span><span class="s0">: {</span>
+          <span class="s2">&quot;type&quot;</span><span class="s0">: </span><span class="s2">&quot;yui&quot;</span>
+      <span class="s0">}</span>
+  },
+
+  <span class="s3">/** 
+<a name="l171"><span class="ln">171  </span></a>   * Settings specific to testing builds. 
+<a name="l172"><span class="ln">172  </span></a>   */</span>
+  <span class="s2">&quot;testing&quot;</span><span class="s0">: {</span>
+  },
+
+  <span class="s3">/** 
+<a name="l173"><span class="ln">173  </span></a>   * Settings specific to development builds. 
+<a name="l174"><span class="ln">174  </span></a>   */</span>
+  <span class="s2">&quot;development&quot;</span><span class="s0">: {</span>
+      <span class="s2">&quot;watch&quot;</span><span class="s0">: {</span>
+          <span class="s2">&quot;delay&quot;</span><span class="s0">: </span><span class="s2">250</span>
+      <span class="s0">}</span>
+  },
+
+  <span class="s3">/** 
+<a name="l175"><span class="ln">175  </span></a>   * Controls the output structure of development-mode (bootstrap) artifacts. May 
+<a name="l176"><span class="ln">176  </span></a>   * be specified by a string: 
+<a name="l177"><span class="ln">177  </span></a>   * 
+<a name="l178"><span class="ln">178  </span></a>   *      &quot;bootstrap&quot;: &quot;${app.dir}&quot; 
+<a name="l179"><span class="ln">179  </span></a>   * 
+<a name="l180"><span class="ln">180  </span></a>   * This will adjust the base path for all bootstrap objects, or expanded into object 
+<a name="l181"><span class="ln">181  </span></a>   * form: 
+<a name="l182"><span class="ln">182  </span></a>   * 
+<a name="l183"><span class="ln">183  </span></a>   *      &quot;bootstrap&quot;: { 
+<a name="l184"><span class="ln">184  </span></a>   *          &quot;base&quot;: &quot;${app.dir}&quot;, 
+<a name="l185"><span class="ln">185  </span></a>   *          &quot;manifest&quot;: &quot;bootstrap.json&quot;, 
+<a name="l186"><span class="ln">186  </span></a>   *          &quot;microloader&quot;: &quot;bootstrap.js&quot;, 
+<a name="l187"><span class="ln">187  </span></a>   *          &quot;css&quot;: &quot;bootstrap.css&quot; 
+<a name="l188"><span class="ln">188  </span></a>   *      } 
+<a name="l189"><span class="ln">189  </span></a>   * 
+<a name="l190"><span class="ln">190  </span></a>   * You can optionally exclude entries from the manifest. For example, to exclude 
+<a name="l191"><span class="ln">191  </span></a>   * the &quot;loadOrder&quot; (to help development load approximate a build) you can add: 
+<a name="l192"><span class="ln">192  </span></a>   * 
+<a name="l193"><span class="ln">193  </span></a>   *      &quot;bootstrap&quot;: { 
+<a name="l194"><span class="ln">194  </span></a>   *          &quot;manifest&quot;: { 
+<a name="l195"><span class="ln">195  </span></a>   *              &quot;path&quot;: &quot;bootstrap.json&quot;, 
+<a name="l196"><span class="ln">196  </span></a>   *              &quot;exclude&quot;: &quot;loadOrder&quot; 
+<a name="l197"><span class="ln">197  </span></a>   *          } 
+<a name="l198"><span class="ln">198  </span></a>   *      } 
+<a name="l199"><span class="ln">199  </span></a>   * 
+<a name="l200"><span class="ln">200  </span></a>   */</span>
+  <span class="s2">&quot;bootstrap&quot;</span><span class="s0">: {</span>
+      <span class="s2">&quot;base&quot;</span><span class="s0">: </span><span class="s2">&quot;${app.dir}&quot;</span><span class="s0">,</span>
+
+      <span class="s2">&quot;microloader&quot;</span><span class="s0">: </span><span class="s2">&quot;bootstrap.js&quot;</span><span class="s0">,</span>
+      <span class="s2">&quot;css&quot;</span><span class="s0">: </span><span class="s2">&quot;bootstrap.css&quot;</span>
+  <span class="s0">},</span>
+
+  <span class="s3">/** 
+<a name="l201"><span class="ln">201  </span></a>   * Controls the output directory for build resources.  May be set with 
+<a name="l202"><span class="ln">202  </span></a>   * either a string: 
+<a name="l203"><span class="ln">203  </span></a>   * 
+<a name="l204"><span class="ln">204  </span></a>   *      &quot;${workspace.build.dir}/${build.environment}/${app.name}&quot; 
+<a name="l205"><span class="ln">205  </span></a>   * 
+<a name="l206"><span class="ln">206  </span></a>   * or an object containing values for various types of build artifacts: 
+<a name="l207"><span class="ln">207  </span></a>   * 
+<a name="l208"><span class="ln">208  </span></a>   *      { 
+<a name="l209"><span class="ln">209  </span></a>   *          &quot;base&quot;: &quot;${workspace.build.dir}/${build.environment}/${app.name}&quot;, 
+<a name="l210"><span class="ln">210  </span></a>   *          &quot;page&quot;: { 
+<a name="l211"><span class="ln">211  </span></a>   *              &quot;path&quot;: &quot;../index.html&quot;, 
+<a name="l212"><span class="ln">212  </span></a>   *              &quot;enable&quot;: false 
+<a name="l213"><span class="ln">213  </span></a>   *          }, 
+<a name="l214"><span class="ln">214  </span></a>   *          &quot;css&quot;: &quot;${app.output.resources}/${app.name}-all.css&quot;, 
+<a name="l215"><span class="ln">215  </span></a>   *          &quot;js&quot;: { 
+<a name="l216"><span class="ln">216  </span></a>   *              &quot;path&quot;: &quot;app.js&quot;, 
+<a name="l217"><span class="ln">217  </span></a>   *              // This setting constrols the output language level.  Set to 'ES6' to 
+<a name="l218"><span class="ln">218  </span></a>   *              // disable the transpiler 
+<a name="l219"><span class="ln">219  </span></a>   *              &quot;version&quot;: &quot;ES5&quot; 
+<a name="l220"><span class="ln">220  </span></a>   *          }, 
+<a name="l221"><span class="ln">221  </span></a>   *          &quot;microloader&quot;: { 
+<a name="l222"><span class="ln">222  </span></a>   *              &quot;path&quot;: &quot;microloader.js&quot;, 
+<a name="l223"><span class="ln">223  </span></a>   *              &quot;embed&quot;: true, 
+<a name="l224"><span class="ln">224  </span></a>   *              &quot;enable&quot;: true 
+<a name="l225"><span class="ln">225  </span></a>   *          }, 
+<a name="l226"><span class="ln">226  </span></a>   *          &quot;manifest&quot;: { 
+<a name="l227"><span class="ln">227  </span></a>   *              &quot;path&quot;: &quot;app.json&quot;, 
+<a name="l228"><span class="ln">228  </span></a>   *              &quot;embed&quot;: false, 
+<a name="l229"><span class="ln">229  </span></a>   *              &quot;enable&quot;: &quot;${app.output.microloader.enable}&quot; 
+<a name="l230"><span class="ln">230  </span></a>   *          }, 
+<a name="l231"><span class="ln">231  </span></a>   *          &quot;resources&quot;: &quot;resources&quot;, 
+<a name="l232"><span class="ln">232  </span></a>   *          &quot;slicer&quot;: { 
+<a name="l233"><span class="ln">233  </span></a>   *              &quot;path&quot;: &quot;${app.output.resources}/images&quot;, 
+<a name="l234"><span class="ln">234  </span></a>   *              &quot;enable&quot;: false 
+<a name="l235"><span class="ln">235  </span></a>   *          }, 
+<a name="l236"><span class="ln">236  </span></a>   *          // Setting the &quot;enable&quot; property of this object to a Truthy value will cause a Application Cache 
+<a name="l237"><span class="ln">237  </span></a>   *          // manifest file to be generated based on this files appCache object. This file will then be injected 
+<a name="l238"><span class="ln">238  </span></a>   *          // into the index.html file of the built application 
+<a name="l239"><span class="ln">239  </span></a>   *          &quot;appCache&quot;:{ 
+<a name="l240"><span class="ln">240  </span></a>   *              &quot;enable&quot;: false&quot; 
+<a name="l241"><span class="ln">241  </span></a>   *          } 
+<a name="l242"><span class="ln">242  </span></a>   *      } 
+<a name="l243"><span class="ln">243  </span></a>   * 
+<a name="l244"><span class="ln">244  </span></a>   */</span>
+
+  <span class="s2">&quot;output&quot;</span><span class="s0">: {</span>
+      <span class="s2">&quot;base&quot;</span><span class="s0">: </span><span class="s2">&quot;${workspace.build.dir}/${build.environment}/${app.name}&quot;</span><span class="s0">,</span>
+      <span class="s2">&quot;appCache&quot;</span><span class="s0">: {</span>
+          <span class="s2">&quot;enable&quot;</span><span class="s0">: </span><span class="s4">false</span>
+      <span class="s0">}</span>
+  },
+
+  <span class="s3">/** 
+<a name="l245"><span class="ln">245  </span></a>  * Controls for localStorage caching 
+<a name="l246"><span class="ln">246  </span></a>  *   &quot;cache&quot;: { 
+<a name="l247"><span class="ln">247  </span></a>  *       // This property controls whether localStorage caching of this manifest file is on or off. 
+<a name="l248"><span class="ln">248  </span></a>  *       // if disabled no deltas will be generated during a build and full updates will be disabled 
+<a name="l249"><span class="ln">249  </span></a>  *       &quot;enable&quot;: false, 
+<a name="l250"><span class="ln">250  </span></a>  * 
+<a name="l251"><span class="ln">251  </span></a>  *       // This property allows for global toggle of deltas. 
+<a name="l252"><span class="ln">252  </span></a>  *       // If set to a string the value will be used as the path to where deltas will be generated relative to you build. 
+<a name="l253"><span class="ln">253  </span></a>  *       // If set to a Truthy Value the default path ok &quot;deltas&quot; will be used 
+<a name="l254"><span class="ln">254  </span></a>  *       // If set to a Falsey value or if this property is not present deltas will be disabled and not generated. 
+<a name="l255"><span class="ln">255  </span></a>  * 
+<a name="l256"><span class="ln">256  </span></a>  *       &quot;deltas&quot;: &quot;deltas&quot; 
+<a name="l257"><span class="ln">257  </span></a>  *   } 
+<a name="l258"><span class="ln">258  </span></a>  */</span>
+
+  <span class="s2">&quot;cache&quot;</span><span class="s0">: {</span>
+      <span class="s2">&quot;enable&quot;</span><span class="s0">: </span><span class="s4">false</span><span class="s0">,</span>
+      <span class="s2">&quot;deltas&quot;</span><span class="s0">: </span><span class="s4">true</span>
+  <span class="s0">},</span>
+
+  <span class="s3">/** 
+<a name="l259"><span class="ln">259  </span></a>   * Used to automatically generate cache.manifest (HTML 5 application cache manifest) 
+<a name="l260"><span class="ln">260  </span></a>   * file when you build. 
+<a name="l261"><span class="ln">261  </span></a>   */</span>
+  <span class="s2">&quot;appCache&quot;</span><span class="s0">: {</span>
+      <span class="s3">/** 
+<a name="l262"><span class="ln">262  </span></a>       * List of items in the CACHE MANIFEST section 
+<a name="l263"><span class="ln">263  </span></a>       */</span>
+      <span class="s2">&quot;cache&quot;</span><span class="s0">: [</span>
+          <span class="s2">&quot;index.html&quot;</span>
+      <span class="s0">],</span>
+      <span class="s3">/** 
+<a name="l264"><span class="ln">264  </span></a>       * List of items in the NETWORK section 
+<a name="l265"><span class="ln">265  </span></a>       */</span>
+      <span class="s2">&quot;network&quot;</span><span class="s0">: [</span>
+          <span class="s2">&quot;*&quot;</span>
+      <span class="s0">],</span>
+      <span class="s3">/** 
+<a name="l266"><span class="ln">266  </span></a>       * List of items in the FALLBACK section 
+<a name="l267"><span class="ln">267  </span></a>       */</span>
+      <span class="s2">&quot;fallback&quot;</span><span class="s0">: []</span>
+  },
+
+  <span class="s3">/** 
+<a name="l268"><span class="ln">268  </span></a>   * Extra resources to be copied into the resource folder as specified in the &quot;resources&quot; 
+<a name="l269"><span class="ln">269  </span></a>   * property of the &quot;output&quot; object. Folders specified in this list will be deeply copied. 
+<a name="l270"><span class="ln">270  </span></a>   */</span>
+  <span class="s2">&quot;resources&quot;</span><span class="s0">: [</span>
+      {
+          <span class="s2">&quot;path&quot;</span><span class="s0">: </span><span class="s2">&quot;resources&quot;</span><span class="s0">,</span>
+          <span class="s2">&quot;output&quot;</span><span class="s0">: </span><span class="s2">&quot;shared&quot;</span>
+      <span class="s0">}</span>
+  ],
+
+  <span class="s3">/** 
+<a name="l271"><span class="ln">271  </span></a>   * Directory path to store all previous production builds. Note that the content 
+<a name="l272"><span class="ln">272  </span></a>   * generated inside this directory must be kept intact for proper generation of 
+<a name="l273"><span class="ln">273  </span></a>   * deltas between updates. 
+<a name="l274"><span class="ln">274  </span></a>   */</span>
+
+  <span class="s2">&quot;archivePath&quot;</span><span class="s0">: </span><span class="s2">&quot;archive&quot;</span><span class="s0">,</span>
+
+  <span class="s3">/** 
+<a name="l275"><span class="ln">275  </span></a>   * Additional resources used during theme slicing operations 
+<a name="l276"><span class="ln">276  </span></a>   */</span>
+  <span class="s2">&quot;slicer&quot;</span><span class="s0">: {</span>
+      <span class="s2">&quot;js&quot;</span><span class="s0">: [</span>
+          {
+              <span class="s2">&quot;path&quot;</span><span class="s0">: </span><span class="s2">&quot;sass/example/custom.js&quot;</span><span class="s0">,</span>
+              <span class="s2">&quot;isWidgetManifest&quot;</span><span class="s0">: </span><span class="s4">true</span>
+          <span class="s0">}</span>
+      ],
+      <span class="s2">&quot;output&quot;</span><span class="s0">: {</span>
+          <span class="s2">&quot;appCache&quot;</span><span class="s0">: {</span>
+              <span class="s2">&quot;enable&quot;</span><span class="s0">: </span><span class="s4">false</span>
+          <span class="s0">}</span>
+      },
+      <span class="s2">&quot;cache&quot;</span><span class="s0">: {</span>
+          <span class="s2">&quot;enable&quot;</span><span class="s0">: </span><span class="s4">false</span>
+      <span class="s0">}</span>
+  },
+
+  <span class="s3">/** 
+<a name="l277"><span class="ln">277  </span></a>   * Build Profiles. This object's properties are each a &quot;build profile&quot;. You can 
+<a name="l278"><span class="ln">278  </span></a>   * add as many as you need to produce optimized builds for devices, themes, locales 
+<a name="l279"><span class="ln">279  </span></a>   * or other criteria. Your &quot;Ext.beforeLoad&quot; hook (see index.html) is responsible for 
+<a name="l280"><span class="ln">280  </span></a>   * selecting the desired build profile by setting &quot;Ext.manifest&quot; to one of these 
+<a name="l281"><span class="ln">281  </span></a>   * names. 
+<a name="l282"><span class="ln">282  </span></a>   * 
+<a name="l283"><span class="ln">283  </span></a>   */</span>
+
+  /** 
+<a name="l284"><span class="ln">284  </span></a>   * File / directory name patttern to ignore when copying to the builds. Must be a 
+<a name="l285"><span class="ln">285  </span></a>   * valid regular expression. 
+<a name="l286"><span class="ln">286  </span></a>   */
+  <span class="s2">&quot;ignore&quot;</span><span class="s0">: [</span>
+      <span class="s2">&quot;(^|/)CVS(/?$|/.*?$)&quot;</span>
+  <span class="s0">],</span>
+
+  <span class="s3">/** 
+<a name="l287"><span class="ln">287  </span></a>   * Uniquely generated id for this application, used as prefix for localStorage keys. 
+<a name="l288"><span class="ln">288  </span></a>   * Normally you should never change this value. 
+<a name="l289"><span class="ln">289  </span></a>   */</span>
+  <span class="s2">&quot;id&quot;</span><span class="s0">: </span><span class="s2">&quot;8ef7963b-e6ff-4a32-af9d-9c51af8a3bee&quot;</span>
+<span class="s0">}</span>
+</pre>
+</body>
+</html>

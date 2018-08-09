@@ -3,7 +3,7 @@
  */
 Ext.define('SimpleERP.store.WeekStarStore', {
     extend: 'Ext.data.Store',
-    xtype: 'weekstarstroe',
+    xtype: 'weekstarstore',
     alias: 'store.weekStartStore',
     storeId: 'weekStartStore',
     model: 'SimpleERP.model.WeekStarModel',
@@ -12,13 +12,13 @@ Ext.define('SimpleERP.store.WeekStarStore', {
         'SimpleERP.model.WeekStarModel'
     ],
 
-    proxy: {
-        type: 'ajax',
-        url: 'erp/fhrank.php',
-        reader: {
-            type: 'json'
-        }
-    },
+    // proxy: {
+    //     type: 'ajax',
+    //     url: 'erp/fhrank.php',
+    //     reader: {
+    //         type: 'json'
+    //     }
+    // },
 
-    autoLoad: false
+    autoLoad: true
 });

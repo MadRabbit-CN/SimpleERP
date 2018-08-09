@@ -1,0 +1,73 @@
+<html>
+<head>
+<title>workspace.json</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #d8d8d8;}
+.s1 { color: #d8d8d8;}
+.s2 { color: #808080; font-style: italic;}
+.s3 { color: #ffa0a0;}
+.ln { color: #555753; font-weight: normal; font-style: normal; }
+</style>
+</head>
+<body bgcolor="#000000">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+workspace.json</font>
+</center></td></tr></table>
+<pre><a name="l1"><span class="ln">1    </span></a><span class="s0">{</span>
+    <span class="s2">/** 
+<a name="l2"><span class="ln">2    </span></a>     * An object containing key value pair framework descriptors. 
+<a name="l3"><span class="ln">3    </span></a>     * 
+<a name="l4"><span class="ln">4    </span></a>     * The value should be an object containing &quot;path&quot; the path inside the workspace where the framework 
+<a name="l5"><span class="ln">5    </span></a>     * files can be found and &quot;version&quot; the version of the framework. For example: 
+<a name="l6"><span class="ln">6    </span></a>     * 
+<a name="l7"><span class="ln">7    </span></a>     *      &quot;frameworks&quot;: { 
+<a name="l8"><span class="ln">8    </span></a>     *          &quot;ext&quot;: { 
+<a name="l9"><span class="ln">9    </span></a>     *              &quot;path&quot;: &quot;ext&quot;, 
+<a name="l10"><span class="ln">10   </span></a>     *              &quot;version&quot;: &quot;n.n.n.n&quot; 
+<a name="l11"><span class="ln">11   </span></a>     *          }, 
+<a name="l12"><span class="ln">12   </span></a>     *          &quot;extnew&quot;: { 
+<a name="l13"><span class="ln">13   </span></a>     *              &quot;path&quot;: &quot;extnew&quot;, 
+<a name="l14"><span class="ln">14   </span></a>     *              &quot;version&quot;: &quot;n.n.n.n&quot; 
+<a name="l15"><span class="ln">15   </span></a>     *          } 
+<a name="l16"><span class="ln">16   </span></a>     *      } 
+<a name="l17"><span class="ln">17   </span></a>     * 
+<a name="l18"><span class="ln">18   </span></a>     * You can exclude the directories that contain the framework from source control and later restore them 
+<a name="l19"><span class="ln">19   </span></a>     * with &quot;sencha workspace install&quot;. See &quot;sencha help workspace install&quot; for more information. 
+<a name="l20"><span class="ln">20   </span></a>     * 
+<a name="l21"><span class="ln">21   </span></a>     */</span>
+    <span class="s3">&quot;frameworks&quot;</span><span class="s0">: {        </span><span class="s3">&quot;ext&quot;</span><span class="s0">: {</span>
+            <span class="s3">&quot;path&quot;</span><span class="s0">:</span><span class="s3">&quot;ext&quot;</span><span class="s0">,</span>
+            <span class="s3">&quot;version&quot;</span><span class="s0">:</span><span class="s3">&quot;6.2.0.981&quot;</span>
+        <span class="s0">}</span>
+
+    },
+
+    <span class="s2">/** 
+<a name="l22"><span class="ln">22   </span></a>     * This is the folder for build outputs in the workspace. 
+<a name="l23"><span class="ln">23   </span></a>     */</span>
+    <span class="s3">&quot;build&quot;</span><span class="s0">: {</span>
+        <span class="s3">&quot;dir&quot;</span><span class="s0">: </span><span class="s3">&quot;${workspace.dir}/build&quot;</span>
+    <span class="s0">},</span>
+
+    <span class="s2">/** 
+<a name="l24"><span class="ln">24   </span></a>     * These configs determine where packages are generated and extracted to (when downloaded). 
+<a name="l25"><span class="ln">25   </span></a>     */</span>
+    <span class="s3">&quot;packages&quot;</span><span class="s0">: {</span>
+        <span class="s2">/** 
+<a name="l26"><span class="ln">26   </span></a>         * This folder contains all local packages. 
+<a name="l27"><span class="ln">27   </span></a>         * If a comma-separated string is used as value the first path will be used as the path to generate new packages. 
+<a name="l28"><span class="ln">28   </span></a>         */</span>
+        <span class="s3">&quot;dir&quot;</span><span class="s0">: </span><span class="s3">&quot;${workspace.dir}/packages/local,${workspace.dir}/packages&quot;</span><span class="s0">,</span>
+
+        <span class="s2">/** 
+<a name="l29"><span class="ln">29   </span></a>         * This folder contains all extracted (remote) packages. 
+<a name="l30"><span class="ln">30   </span></a>         */</span>
+        <span class="s3">&quot;extract&quot;</span><span class="s0">: </span><span class="s3">&quot;${workspace.dir}/packages/remote&quot;</span>
+    <span class="s0">}</span>
+}
+</pre>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<html>
+<head>
+<title>build.xml</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #d8d8d8; font-style: italic;}
+.s1 { color: #bfa4a4;}
+.s2 { color: #d8d8d8;}
+.s3 { color: #ffa0a0;}
+.s4 { color: #d8d8d8;}
+.s5 { color: #60ff60;}
+.s6 { color: #757575;}
+.ln { color: #555753; font-weight: normal; font-style: normal; }
+</style>
+</head>
+<body bgcolor="#000000">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+build.xml</font>
+</center></td></tr></table>
+<pre><a name="l1"><span class="ln">1    </span></a><span class="s0">&lt;?</span><span class="s1">xml version</span><span class="s3">=&quot;1.0&quot; </span><span class="s1">encoding</span><span class="s3">=&quot;utf-8&quot;</span><span class="s0">?&gt;</span>
+<span class="s2">&lt;</span><span class="s5">project </span><span class="s1">name</span><span class="s3">=&quot;SimpleERP&quot; </span><span class="s1">default</span><span class="s3">=&quot;.help&quot;</span><span class="s2">&gt;</span>
+    <span class="s6">&lt;!--</span>
+    The build-impl.xml file imported here contains the guts of the build process. It is 
+<a name="l2"><span class="ln">2    </span></a>    a great idea to read that file to understand how the process works, but it is best to 
+<a name="l3"><span class="ln">3    </span></a>    limit your changes to this file. 
+<a name="l4"><span class="ln">4    </span></a>    --&gt;
+    <span class="s2">&lt;</span><span class="s5">import </span><span class="s1">file</span><span class="s3">=&quot;${basedir}/.sencha/app/build-impl.xml&quot;</span><span class="s2">/&gt;</span>
+
+    <span class="s6">&lt;!--</span>
+    The following targets can be provided to inject logic before and/or after key steps 
+<a name="l5"><span class="ln">5    </span></a>    of the build process: 
+<a name="l6"><span class="ln">6    </span></a> 
+<a name="l7"><span class="ln">7    </span></a>        The &quot;init-local&quot; target is used to initialize properties that may be personalized 
+<a name="l8"><span class="ln">8    </span></a>        for the local machine. 
+<a name="l9"><span class="ln">9    </span></a> 
+<a name="l10"><span class="ln">10   </span></a>            &lt;target name=&quot;-before-init-local&quot;/&gt; 
+<a name="l11"><span class="ln">11   </span></a>            &lt;target name=&quot;-after-init-local&quot;/&gt; 
+<a name="l12"><span class="ln">12   </span></a> 
+<a name="l13"><span class="ln">13   </span></a>        The &quot;clean&quot; target is used to clean build output from the build.dir. 
+<a name="l14"><span class="ln">14   </span></a> 
+<a name="l15"><span class="ln">15   </span></a>            &lt;target name=&quot;-before-clean&quot;/&gt; 
+<a name="l16"><span class="ln">16   </span></a>            &lt;target name=&quot;-after-clean&quot;/&gt; 
+<a name="l17"><span class="ln">17   </span></a> 
+<a name="l18"><span class="ln">18   </span></a>        The general &quot;init&quot; target is used to initialize all other properties, including 
+<a name="l19"><span class="ln">19   </span></a>        those provided by Sencha Cmd. 
+<a name="l20"><span class="ln">20   </span></a> 
+<a name="l21"><span class="ln">21   </span></a>            &lt;target name=&quot;-before-init&quot;/&gt; 
+<a name="l22"><span class="ln">22   </span></a>            &lt;target name=&quot;-after-init&quot;/&gt; 
+<a name="l23"><span class="ln">23   </span></a> 
+<a name="l24"><span class="ln">24   </span></a>        The &quot;page&quot; target performs the call to Sencha Cmd to build the 'all-classes.js' file. 
+<a name="l25"><span class="ln">25   </span></a> 
+<a name="l26"><span class="ln">26   </span></a>            &lt;target name=&quot;-before-page&quot;/&gt; 
+<a name="l27"><span class="ln">27   </span></a>            &lt;target name=&quot;-after-page&quot;/&gt; 
+<a name="l28"><span class="ln">28   </span></a> 
+<a name="l29"><span class="ln">29   </span></a>        The &quot;build&quot; target performs the call to Sencha Cmd to build the application. 
+<a name="l30"><span class="ln">30   </span></a> 
+<a name="l31"><span class="ln">31   </span></a>            &lt;target name=&quot;-before-build&quot;/&gt; 
+<a name="l32"><span class="ln">32   </span></a>            &lt;target name=&quot;-after-build&quot;/&gt; 
+<a name="l33"><span class="ln">33   </span></a>    --&gt;
+
+<span class="s2">&lt;/</span><span class="s5">project</span><span class="s2">&gt;</span>
+</pre>
+</body>
+</html>

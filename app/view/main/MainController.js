@@ -139,6 +139,7 @@ Ext.define('SimpleERP.view.main.MainController', {
 
     onMainViewRender:function() {
         if (!window.location.hash) {
+            // me.isLogin = true;
             this.redirectTo("dashboard");
         }
     },

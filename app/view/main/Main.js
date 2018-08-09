@@ -2,6 +2,8 @@ Ext.define('SimpleERP.view.main.Main', {
     extend: 'Ext.container.Viewport',
 
     requires: [
+        'Ext.container.Container',
+        'Ext.layout.container.Card',
         'Ext.layout.container.VBox',
         'Ext.list.Tree',
         'Ext.toolbar.*',
@@ -91,9 +93,21 @@ Ext.define('SimpleERP.view.main.Main', {
                         selectionchange: 'onNavigationTreeSelectionChange'
                     }
                 },
+                // {
+                //     xtype: 'container',
+                //     flex: 1,
+                //     reference: 'mainCardPanel',
+                //     cls: 'sencha-dash-right-main-container',
+                //     itemId: 'contentPanel',
+                //     layout: {
+                //         type: 'card',
+                //         anchor: '100%'
+                //     }
+                // }
                 {
                     //主页center页面
                     xtype: 'weekstar',
+                    id:'weekstar',
                     flex: 1,
                     reference: 'weekstar',
                     itemId: 'weekstarPanel',

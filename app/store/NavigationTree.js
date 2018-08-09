@@ -12,28 +12,34 @@ Ext.define('SimpleERP.store.NavigationTree', {
         children: [
             //子节点
             {
-                text: '왕겜女',
+                text: '空页面',
                 viewType: 'pageblank',
                 leaf: true,
                 visible: false
             },
             {
-                text: '500柬暠',
+                text: '500页面',
                 viewType: 'page500',
                 leaf: true,
                 visible: false
             },
             {
-                text: '되쩌柬暠',
+                text: '登陆页面',
                 viewType: 'login',
                 leaf: true,
                 visible: false
             },
             {
-                text: '錦맣쵱쯤柬暠',
+                text: '重置密码页面',
                 viewType: 'passwordreset',
                 leaf: true,
                 visible: false
+            },
+            {
+                text: '每周之星',
+                viewType: 'weekstar',
+                leaf: true,
+                visible: true
             }
         ]
     }

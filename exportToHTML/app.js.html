@@ -1,0 +1,52 @@
+<html>
+<head>
+<title>app.js</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #808080; font-style: italic;}
+.s1 { color: #d8d8d8;}
+.s2 { color: #d8d8d8;}
+.s3 { color: #ffa0a0;}
+.s4 { color: #757575;}
+.ln { color: #555753; font-weight: normal; font-style: normal; }
+</style>
+</head>
+<body bgcolor="#000000">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+app.js</font>
+</center></td></tr></table>
+<pre><a name="l1"><span class="ln">1    </span></a><span class="s0">/* 
+<a name="l2"><span class="ln">2    </span></a> * This file is generated and updated by Sencha Cmd. You can edit this file as 
+<a name="l3"><span class="ln">3    </span></a> * needed for your application, but these edits will have to be merged by 
+<a name="l4"><span class="ln">4    </span></a> * Sencha Cmd when upgrading. 
+<a name="l5"><span class="ln">5    </span></a> */</span>
+<span class="s1">Ext</span><span class="s2">.</span><span class="s1">application</span><span class="s2">({</span>
+    <span class="s1">name</span><span class="s2">: </span><span class="s3">'SimpleERP'</span><span class="s2">,</span>
+
+    <span class="s1">extend</span><span class="s2">: </span><span class="s3">'SimpleERP.Application'</span><span class="s2">,</span>
+
+    <span class="s1">requires</span><span class="s2">: [</span>
+        <span class="s3">'SimpleERP.overrides.*'</span><span class="s2">,</span>
+        <span class="s3">'SimpleERP.locale.*'</span><span class="s2">,</span>
+        <span class="s3">'SimpleERP.ux.*'</span><span class="s2">,</span>
+        <span class="s3">'SimpleERP.util.*'</span><span class="s2">,</span>
+        <span class="s3">'SimpleERP.view.main.Main'</span>
+    <span class="s2">],</span>
+
+    <span class="s4">// The name of the initial view to create. With the classic toolkit this class</span>
+    // will gain a &quot;viewport&quot; plugin if it does not extend Ext.Viewport. With the
+    // modern toolkit, the main view will be added to the Viewport.
+    //
+    <span class="s1">mainView</span><span class="s2">: </span><span class="s3">'SimpleERP.view.main.Main'</span>
+
+    <span class="s4">//-------------------------------------------------------------------------</span>
+    // Most customizations should be made to SimpleERP.Application. If you need to
+    // customize this file, doing so below this section reduces the likelihood
+    // of merge conflicts when upgrading to new versions of Sencha Cmd.
+    //-------------------------------------------------------------------------
+<span class="s2">});</span>
+</pre>
+</body>
+</html>

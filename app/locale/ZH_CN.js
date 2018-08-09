@@ -11,7 +11,7 @@
         FailedTitle: '错误信息',
         Failed404: '错误的请求地址',
         Failed500: '服务器内部错误',
-        FailedOtherCode:'错误代码：{0}<br\>响应：{1}',
+        FailedOtherCode:'错误代码：{0}<br>响应：{1}',
 
         AppTitle: 'ERP系统',
         DefaultMessageTitle: '信息',

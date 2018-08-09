@@ -7,40 +7,49 @@ Ext.define('SimpleERP.view.main.WeekStar.WeekStarViewModel', {
     alias: 'viewmodel.weekstarviewmodel',
 
     requires: [
-        'Ext.data.proxy.Rest',
-        'Ext.data.reader.Json',
-        'Ext.data.writer.Json'
+        'SimpleERP.store.WeekStarStore'
     ],
 
     data: {
-        date1: null,
-        date2: null,
-        week:  null,
-        alloc: null,
-        pack:  null,
-        month: null
+        week:  "第一周",
+        alloc: "赵六",
+        pack:  "王五",
+        januaryPack:'———',
+        januaryAlloc: '———',
+        februaryPack:'———',
+        februaryAlloc: '———',
+        marchPack:'———',
+        marchAlloc: '———',
+        aprilPack:'———',
+        aprilAlloc: '———',
+        mayPack:'———',
+        mayAlloc: '———',
+        junePack:'———',
+        juneAlloc: '———',
+        julyPack:'———',
+        julyAlloc: '———',
+        augustPack:'———',
+        augustAlloc: '———',
+        septemberPack:'———',
+        septemberAlloc: '———',
+        octoberPack:'———',
+        octoberAlloc: '———',
+        novemberPack:'———',
+        novemberAlloc: '———',
+        decemberPack:'———',
+        decemberAlloc: '———',
+
     },
+
 
     stores: {
         monthdata: {
-            fields: [
-                {name: 'month',type: 'string'},
-                {name: 'alloc',type: 'string'},
-                {name: 'pack',type: 'string'}
-             ],
-            autoLoad: false,
-            proxy: {
-                type: 'rest',
-                url: 'erp/fhrank.php',
-                reader: {
-                    type: 'json',
-                },
-                writer: {
-                    type: 'json'
-                }
-            }
+            type: 'weekStartStore'
         }
+    },
+
+    listeners: {
+        // load: 'onWeekStarStoreLoad'
     }
 
 });
-

@@ -21,6 +21,10 @@
         <param-value>http://localhost:80/erp/fhrank.php</param-value>
     </init-param>
     <init-param>
+      <param-name>ProxyTo</param-name>
+      <param-value>http://localhost:80/erp/fhtong.php</param-value>
+    </init-param>
+    <init-param>
         <param-name>HostHeader</param-name>
         <param-value>localhost</param-value>
     </init-param>
